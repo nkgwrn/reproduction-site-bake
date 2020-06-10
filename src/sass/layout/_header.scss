@@ -1,0 +1,36 @@
+.l-header {
+  border-bottom: 2px solid $color-primary;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background-color: $color-main;
+
+  @include mqMd {
+    height: 60px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__logo {
+    width: 200px;
+
+    @include mqMd {
+      width: 150px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__nav {
+    @include mqMd {
+      display: none;
+    }
+  }
+}

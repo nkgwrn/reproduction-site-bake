@@ -1,0 +1,19 @@
+.u-hide-sm {
+  @include mqMd {
+    display: none;
+  }
+}
+
+.u-hide-md {
+  @include mqMd {
+    display: none;
+  }
+}
+
+.u-hide-pc {
+  display: none;
+
+  @include mqMd {
+    display: block;
+  }
+}

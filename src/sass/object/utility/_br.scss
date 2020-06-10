@@ -1,0 +1,15 @@
+.u-br-pc {
+  display: block;
+
+  @include mqMd {
+    display: none;
+  }
+}
+
+.u-br-sp {
+  display: none;
+
+  @include mqMd {
+    display: block;
+  }
+}
