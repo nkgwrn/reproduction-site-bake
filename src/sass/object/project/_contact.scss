@@ -6,8 +6,12 @@
 
   &__lead {
     text-align: center;
-    font-size: 1.8rem; // 1.5rem
+    font-size: 1.8rem; // TODO:1440px->1.6rem
     margin-top: 2em;
+
+    @include mqSm {
+      font-size: 3.2vw;
+    }
   }
 
   &__body {
@@ -19,10 +23,19 @@
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(2, 1fr);
     gap: 4px;
+
+    @include mqSm {
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
-    font-size: 2rem; // 1.7rem
+    font-size: 2rem; // TODO:1440px->1.8rem
+
+    @include mqSm {
+      font-size: 3.2vw;
+    }
 
     a {
       display: block;
@@ -33,9 +46,14 @@
 
   &__company {
     width: calc(100% - 500px);
-    margin: 5em auto 0;
-    font-size: 1.6rem;
+    margin: 4em auto 0;
+    font-size: 1.6rem; // TODO:1440px->1.4rem
     letter-spacing: 0.15em;
+
+    @include mqSm {
+      width: 100%;
+      font-size: 2.6vw;
+    }
 
     &__list {
       display: flex;
@@ -48,12 +66,20 @@
       dt {
         width: 24%;
         padding-top: 2em;
+
+        @include mqSm {
+          width: 37.3%;
+        }
       }
 
       dd {
         width: 76%;
         padding-left: 1em;
         padding-top: 2em;
+
+        @include mqSm {
+          width: 62.7%;
+        }
       }
     }
   }

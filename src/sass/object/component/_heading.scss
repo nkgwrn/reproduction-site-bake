@@ -3,5 +3,9 @@
     font-size: 3vw;
     letter-spacing: 0.15em;
     text-align: center;
+
+    @include mqSm {
+      font-size: 8vw;
+    }
   }
 }

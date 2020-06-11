@@ -386,10 +386,23 @@ li {
   box-sizing: content-box;
 }
 
+@media only screen and (max-width: 480px) {
+  .c-container {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
+
 .c-heading--sm {
   font-size: 3vw;
   letter-spacing: 0.15em;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .c-heading--sm {
+    font-size: 8vw;
+  }
 }
 
 /* ---------------------------------------------------------
@@ -403,6 +416,12 @@ li {
   text-align: center;
   font-size: 1.8rem;
   margin-top: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-contact__lead {
+    font-size: 3.2vw;
+  }
 }
 
 .p-contact__body {
@@ -419,8 +438,23 @@ li {
   gap: 4px;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-contact__list {
+    -ms-grid-rows: (1fr)[6];
+    grid-template-rows: repeat(6, 1fr);
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .p-contact__item {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-contact__item {
+    font-size: 3.2vw;
+  }
 }
 
 .p-contact__item a {
@@ -431,9 +465,16 @@ li {
 
 .p-contact__company {
   width: calc(100% - 500px);
-  margin: 5em auto 0;
+  margin: 4em auto 0;
   font-size: 1.6rem;
   letter-spacing: 0.15em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-contact__company {
+    width: 100%;
+    font-size: 2.6vw;
+  }
 }
 
 .p-contact__company__list {
@@ -450,10 +491,22 @@ li {
   padding-top: 2em;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-contact__company__list dt {
+    width: 37.3%;
+  }
+}
+
 .p-contact__company__list dd {
   width: 76%;
   padding-left: 1em;
   padding-top: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-contact__company__list dd {
+    width: 62.7%;
+  }
 }
 
 /* ---------------------------------------------------------

@@ -9,7 +9,7 @@
 .u-br-sp {
   display: none;
 
-  @include mqMd {
+  @include mqSm {
     display: block;
   }
 }

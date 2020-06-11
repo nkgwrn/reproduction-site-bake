@@ -3,4 +3,9 @@
   padding: 0 90px;
   margin: 0 auto;
   box-sizing: content-box;
+
+  @include mqSm {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
 }
