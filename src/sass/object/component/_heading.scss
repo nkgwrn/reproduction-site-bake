@@ -1,11 +1,21 @@
 .c-heading {
   &--sm {
-    font-size: 3vw;
+    font-size: 3.45vw;
     letter-spacing: 0.15em;
     text-align: center;
 
     @include mqSm {
       font-size: 8vw;
+    }
+  }
+
+  &--md {
+    font-size: 5.55vw;
+    letter-spacing: 0.15em;
+    position: absolute;
+
+    @include mqSm {
+      font-size: 13.25vw;
     }
   }
 }

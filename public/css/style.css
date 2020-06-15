@@ -215,6 +215,7 @@ body {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.01em;
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -394,7 +395,7 @@ li {
 }
 
 .c-heading--sm {
-  font-size: 3vw;
+  font-size: 3.45vw;
   letter-spacing: 0.15em;
   text-align: center;
 }
@@ -405,11 +406,47 @@ li {
   }
 }
 
+.c-heading--md {
+  font-size: 5.55vw;
+  letter-spacing: 0.15em;
+  position: absolute;
+}
+
+@media only screen and (max-width: 480px) {
+  .c-heading--md {
+    font-size: 13.25vw;
+  }
+}
+
 /* ---------------------------------------------------------
  Project
 --------------------------------------------------------- */
 .p-contact {
   background-color: #f0f0f0;
+  position: relative;
+}
+
+.p-contact::before {
+  content: "";
+  position: absolute;
+  top: -10vw;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10vw calc(100vw - 15px);
+  border-color: transparent transparent #f0f0f0 transparent;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-contact::before {
+    top: -15vw;
+    border-width: 0 0 15vw 100vw;
+  }
+}
+
+.p-contact__head {
+  padding-top: 12em;
 }
 
 .p-contact__lead {
@@ -507,6 +544,35 @@ li {
   .p-contact__company__list dd {
     width: 62.7%;
   }
+}
+
+.p-news {
+  position: relative;
+  margin-bottom: 300px;
+}
+
+.p-news::before {
+  content: "";
+  position: absolute;
+  top: -20vw;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 20vw calc(100vw - 15px);
+  border-color: transparent transparent #fff transparent;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-news::before {
+    top: -18.5vw;
+    border-width: 0 0 18.75vw 100vw;
+    transform: rotateY(-180deg);
+  }
+}
+
+.p-news__head {
+  padding-top: 6em;
 }
 
 .p-news__body {
@@ -672,6 +738,58 @@ li {
 
 @media all and (-ms-high-contrast: none) {
   .p-news__btn a:hover::before {
+    opacity: 0.6;
+  }
+}
+
+.p-shops {
+  height: 62vw;
+  background-image: url("/image/img_shops.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-shops {
+    height: 126vw;
+  }
+}
+
+.p-shops::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10vw 0 0 calc(100vw - 15px);
+  border-color: #fff transparent transparent transparent;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-shops::before {
+    transform: rotateY(-180deg);
+    border-width: 15vw 0 0 100vw;
+  }
+}
+
+.p-shops__link {
+  display: inline-block;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+  .p-shops__link:hover {
+    opacity: 0.6;
+  }
+}
+
+@media all and (-ms-high-contrast: none) {
+  .p-shops__link:hover::before {
     opacity: 0.6;
   }
 }

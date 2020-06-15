@@ -1,4 +1,29 @@
 .p-news {
+  position: relative;
+  margin-bottom: 300px; //TODO: fix margin
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20vw;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 20vw calc(100vw - 15px);
+    border-color: transparent transparent #fff transparent;
+
+    @include mqSm {
+      top: -18.5vw;
+      border-width: 0 0 18.75vw 100vw;
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__head {
+    padding-top: 6em;
+  }
+
   &__body {
     margin-top: 3em;
   }
