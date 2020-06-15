@@ -18,4 +18,13 @@
       font-size: 13.25vw;
     }
   }
+
+  &--lg {
+    font-size: 7vw;
+    letter-spacing: 0.15em;
+
+    @include mqSm {
+      font-size: 13.25vw;
+    }
+  }
 }
