@@ -780,6 +780,21 @@ li {
   display: inline-block;
   color: #fff;
   transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.p-shops__link::before {
+  content: "";
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 0px;
+  border-top: solid 0.35vw #fff;
+  border-right: solid 0.35vw #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  transform-origin: left bottom;
+  top: 25%;
+  right: -0.5em;
 }
 
 @media (hover: hover) {
