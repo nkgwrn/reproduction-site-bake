@@ -36,10 +36,10 @@
 @import "object/project/contact";
 @import "object/project/news";
 @import "object/project/shops";
-// @import "object/project/information";
-// @import "object/project/news";
-// @import "object/project/lead";
-// @import "object/project/mv";
+@import "object/project/philosophy";
+@import "object/project/philosophy-card";
+@import "object/project/howtoeat";
+@import "object/project/howtoeat-card";
 // @import "object/project/gnav";
 // @import "object/project/nav-sp";
 // @import "object/project/toggle";
@@ -50,5 +50,5 @@
  Utility
 --------------------------------------------------------- */
 @import "object/utility/font";
-// @import "object/utility/br";
+@import "object/utility/br";
 // @import "object/utility/hide";

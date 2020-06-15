@@ -1,0 +1,76 @@
+.p-howtoeat {
+  background-color: $color-primary;
+  font-size: 1.6rem;
+  position: relative;
+  margin-top: 300px;
+
+  @include mqSm {
+    padding-bottom: 15vw;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -19vw;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 19vw calc(100vw - 15px);
+    transform: rotateY(-180deg);
+    border-color: transparent transparent $color-primary transparent;
+
+    @include mqSm {
+      top: -16vw;
+      border-width: 0 0 16vw 100vw;
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__head {
+    position: relative;
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+
+    @include mqSm {
+      letter-spacing: 0.03em;
+      line-height: 2;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: -3.5em;
+    left: 0;
+
+    @include mqSm {
+      position: static;
+      font-size: 4vw;
+      padding-top: 13vw;
+    }
+  }
+
+  &__body {
+    padding-top: 7.5em;
+    position: relative;
+
+    @include mqSm {
+      padding-top: 16vw;
+    }
+
+    > p {
+      position: absolute;
+      right: 2em;
+      top: 7.5em;
+
+      @include mqSm {
+        width: 100%;
+        left: 0;
+        right: unset;
+        top: unset;
+        bottom: 0;
+        font-size: 2vw;
+      }
+    }
+  }
+}

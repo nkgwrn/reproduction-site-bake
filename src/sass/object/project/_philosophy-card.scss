@@ -1,0 +1,46 @@
+.p-philosophy-card {
+  &__label {
+    background-color: $color-primary;
+    padding: 1.5em 2.5em;
+    display: inline-block;
+    font-size: 2.4rem; //TODO
+    position: absolute;
+    right: -3em;
+    top: -2em;
+  }
+
+  &__thumb {
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 44.4%;
+    }
+
+    &--01 {
+      background-image: url("/image/img_philosophy_01.jpg");
+    }
+  }
+
+  &__body {
+    font-size: 1.8rem;
+    padding: 2.75em 3em;
+    background-color: $color-primary;
+
+    dt {
+      font-size: 3rem;
+    }
+
+    dd {
+      padding-top: 1.75em;
+      line-height: 2;
+    }
+  }
+
+  &.is-open {
+    .p-philosophy-card__label {
+    }
+  }
+}

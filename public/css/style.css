@@ -239,15 +239,6 @@ a {
   cursor: pointer;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  line-height: 1.65;
-}
-
 img {
   max-width: 100%;
 }
@@ -809,6 +800,278 @@ li {
   }
 }
 
+.p-philosophy__item {
+  display: flex;
+}
+
+.p-philosophy__panel {
+  width: 50%;
+  position: relative;
+}
+
+.p-philosophy__panel.is-open {
+  width: 54.5%;
+}
+
+.p-philosophy-card__label {
+  background-color: gold;
+  padding: 1.5em 2.5em;
+  display: inline-block;
+  font-size: 2.4rem;
+  position: absolute;
+  right: -3em;
+  top: -2em;
+}
+
+.p-philosophy-card__thumb {
+  background-size: cover;
+  background-position: center;
+}
+
+.p-philosophy-card__thumb::before {
+  content: "";
+  display: block;
+  padding-top: 44.4%;
+}
+
+.p-philosophy-card__thumb--01 {
+  background-image: url("/image/img_philosophy_01.jpg");
+}
+
+.p-philosophy-card__body {
+  font-size: 1.8rem;
+  padding: 2.75em 3em;
+  background-color: gold;
+}
+
+.p-philosophy-card__body dt {
+  font-size: 3rem;
+}
+
+.p-philosophy-card__body dd {
+  padding-top: 1.75em;
+  line-height: 2;
+}
+
+.p-howtoeat {
+  background-color: gold;
+  font-size: 1.6rem;
+  position: relative;
+  margin-top: 300px;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat {
+    padding-bottom: 15vw;
+  }
+}
+
+.p-howtoeat::before {
+  content: "";
+  position: absolute;
+  top: -19vw;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 19vw calc(100vw - 15px);
+  transform: rotateY(-180deg);
+  border-color: transparent transparent gold transparent;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat::before {
+    top: -16vw;
+    border-width: 0 0 16vw 100vw;
+    transform: rotateY(-180deg);
+  }
+}
+
+.p-howtoeat__head {
+  position: relative;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat__head {
+    letter-spacing: 0.03em;
+    line-height: 2;
+  }
+}
+
+.p-howtoeat__heading {
+  position: absolute;
+  top: -3.5em;
+  left: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat__heading {
+    position: static;
+    font-size: 4vw;
+    padding-top: 13vw;
+  }
+}
+
+.p-howtoeat__body {
+  padding-top: 7.5em;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat__body {
+    padding-top: 16vw;
+  }
+}
+
+.p-howtoeat__body > p {
+  position: absolute;
+  right: 2em;
+  top: 7.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat__body > p {
+    width: 100%;
+    left: 0;
+    right: unset;
+    top: unset;
+    bottom: 0;
+    font-size: 2vw;
+  }
+}
+
+.p-howtoeat-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  gap: 50px;
+  padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 6vw;
+    padding-bottom: 27vw;
+  }
+}
+
+.p-howtoeat-card__item:nth-child(2) {
+  margin-top: 6rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__item:nth-child(2) {
+    margin-top: 9vw;
+  }
+}
+
+.p-howtoeat-card__item:nth-child(3) {
+  margin-top: 12rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__item:nth-child(3) {
+    margin-top: 0;
+  }
+}
+
+.p-howtoeat-card__item:nth-child(4) {
+  margin-top: 18rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__item:nth-child(4) {
+    margin-top: 9vw;
+  }
+}
+
+.p-howtoeat-card__head {
+  position: relative;
+  line-height: 1;
+}
+
+.p-howtoeat-card__head > span {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 2rem;
+  width: 3em;
+  position: relative;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__head > span {
+    font-size: 3.6vw;
+    width: 2.4em;
+  }
+}
+
+.p-howtoeat-card__head > span > span {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.p-howtoeat-card__head > span::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.p-howtoeat-card__ttl {
+  position: absolute;
+  top: 55%;
+  left: 16%;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__ttl {
+    top: 80%;
+  }
+}
+
+.p-howtoeat-card__en {
+  font-size: 4.8rem;
+  color: #fff;
+  letter-spacing: 0.15em;
+  display: block;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__en {
+    font-size: 6.6vw;
+  }
+}
+
+.p-howtoeat-card__jp {
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__jp {
+    font-size: 3.2vw;
+  }
+}
+
+.p-howtoeat-card__img {
+  padding-top: 6em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__body {
+    font-size: 3.2vw;
+  }
+}
+
 /* ---------------------------------------------------------
  Utility
 --------------------------------------------------------- */
@@ -826,4 +1089,24 @@ li {
 
 .u-font-rockwell {
   font-family: "Rockwell";
+}
+
+.u-br-pc {
+  display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .u-br-pc {
+    display: none;
+  }
+}
+
+.u-br-sp {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .u-br-sp {
+    display: block;
+  }
 }
