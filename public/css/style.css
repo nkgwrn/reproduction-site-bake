@@ -1093,7 +1093,7 @@ li {
 .p-price::before {
   content: "";
   display: block;
-  padding-top: 110%;
+  padding-top: 130%;
 }
 
 @media only screen and (max-width: 480px) {
