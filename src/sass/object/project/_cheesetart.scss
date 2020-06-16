@@ -34,6 +34,7 @@
     width: 22%;
     right: 0;
     top: -23em;
+    mix-blend-mode: multiply;
 
     @include mqSm {
       top: -30vw;
@@ -59,6 +60,7 @@
     z-index: 2;
     right: 610px;
     top: -15%;
+    mix-blend-mode: multiply;
 
     @include mqSm {
       font-size: 3.6vw;

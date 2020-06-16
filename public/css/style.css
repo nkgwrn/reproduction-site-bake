@@ -1300,6 +1300,7 @@ li {
   width: 22%;
   right: 0;
   top: -23em;
+  mix-blend-mode: multiply;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1330,6 +1331,7 @@ li {
   z-index: 2;
   right: 610px;
   top: -15%;
+  mix-blend-mode: multiply;
 }
 
 @media only screen and (max-width: 480px) {
