@@ -1,6 +1,7 @@
 .p-cheesetart {
   padding-top: 11vw;
   position: relative;
+  padding-bottom: 8vw;
 
   &::before {
     content: "";
@@ -16,6 +17,25 @@
     @include mqSm {
       top: -35vw;
       border-width: 0 0 35vw 100vw;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -28vw;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28vw 0 0 calc(100vw - 15px);
+    border-color: #fff transparent transparent transparent;
+    transform: rotateY(-180deg);
+
+    @include mqSm {
+      bottom: -36vw;
+      border-width: 36vw 0 0 calc(100vw - 15px);
     }
   }
 
