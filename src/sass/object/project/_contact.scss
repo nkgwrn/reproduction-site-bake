@@ -19,6 +19,25 @@
     }
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -25vw;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 25vw 0 0 calc(100vw - 15px);
+    border-color: #f0f0f0 transparent transparent transparent;
+    transform: rotateY(-180deg);
+
+    @include mqSm {
+      bottom: -35vw;
+      border-width: 35vw 0 0 100vw;
+    }
+  }
+
   &__head {
     padding-top: 12em;
   }
