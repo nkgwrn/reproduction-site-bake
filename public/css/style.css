@@ -365,6 +365,21 @@ li {
 /* =========================================================
  Layout
 ========================================================= */
+.l-footer {
+  padding-top: 360px;
+  background-attachment: fixed;
+  background-image: url("/image/bg_footer.jpg");
+  background-position: bottom;
+  background-size: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .l-footer {
+    padding-top: 45vw;
+    background-image: url("/image/bg_footer_sp.jpg");
+  }
+}
+
 /* =========================================================
  Object
 ========================================================= */
@@ -1524,6 +1539,99 @@ li {
   .p-cheesetart__panel:last-child .p-cheesetart__body {
     margin-left: 0;
     margin-right: 10%;
+  }
+}
+
+.p-footer {
+  padding: 90px 50px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer {
+    padding: 60px 30px;
+  }
+}
+
+.p-footer a {
+  color: #fff;
+}
+
+.p-footer__logo {
+  width: 10%;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__logo {
+    width: 20%;
+  }
+}
+
+.p-footer__info {
+  width: 63.5%;
+}
+
+.p-footer__nav {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__nav {
+    display: none;
+  }
+}
+
+.p-footer__nav > * ~ * {
+  margin-left: 2.5em;
+}
+
+.p-footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__bottom {
+    justify-content: flex-end;
+  }
+}
+
+.p-footer__sns {
+  display: flex;
+  height: 42px;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__sns {
+    width: 60%;
+    height: auto;
+  }
+}
+
+.p-footer__sns li ~ li {
+  margin-left: 0.5em;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__sns li ~ li {
+    margin-left: 1em;
+  }
+}
+
+.p-footer__copy {
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-footer__copy {
+    display: none;
   }
 }
 

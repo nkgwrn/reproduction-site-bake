@@ -1,0 +1,78 @@
+.p-footer {
+  padding: 90px 50px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #fff;
+
+  @include mqSm {
+    padding: 60px 30px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &__logo {
+    width: 10%;
+
+    @include mqSm {
+      width: 20%;
+    }
+  }
+
+  &__info {
+    width: 63.5%;
+  }
+
+  &__nav {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-end;
+
+    @include mqSm {
+      display: none;
+    }
+
+    > * ~ * {
+      margin-left: 2.5em;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+
+    @include mqSm {
+      justify-content: flex-end;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    height: 42px;
+
+    @include mqSm {
+      width: 60%;
+      height: auto;
+    }
+
+    li ~ li {
+      margin-left: 0.5em;
+
+      @include mqSm {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 1.2rem;
+
+    @include mqSm {
+      display: none;
+    }
+  }
+}
