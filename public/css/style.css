@@ -1543,7 +1543,7 @@ li {
 }
 
 .p-footer {
-  padding: 90px 50px 40px;
+  padding: 90px 50px 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -1616,13 +1616,7 @@ li {
 }
 
 .p-footer__sns li ~ li {
-  margin-left: 0.5em;
-}
-
-@media only screen and (max-width: 480px) {
-  .p-footer__sns li ~ li {
-    margin-left: 1em;
-  }
+  margin-left: 1em;
 }
 
 .p-footer__copy {

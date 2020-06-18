@@ -1,5 +1,5 @@
 .p-footer {
-  padding: 90px 50px 40px;
+  padding: 90px 50px 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -60,11 +60,7 @@
     }
 
     li ~ li {
-      margin-left: 0.5em;
-
-      @include mqSm {
-        margin-left: 1em;
-      }
+      margin-left: 1em;
     }
   }
 
