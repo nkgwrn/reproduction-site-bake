@@ -4,23 +4,46 @@
   background-size: cover;
   position: relative;
 
+  @include mqSm {
+    background-image: url("../image/bg_cheesetart_sp.jpg");
+  }
+
   &__lead {
     padding: 380px 240px 420px;
+
+    @include mqSm {
+      padding: 98vw 16vw 37.5vw;
+    }
   }
 
   &__head {
     font-size: 3.6rem;
     font-weight: normal;
+
+    @include mqSm {
+      font-size: 6.5vw;
+    }
   }
 
   &__sub {
     font-size: 2.6rem;
     margin-top: 4.2vw;
+
+    @include mqSm {
+      font-size: 4.8vw;
+      margin-top: 8vw;
+    }
   }
 
   &__text {
     font-size: 2rem;
     margin-top: 4.5vw;
+
+    @include mqSm {
+      font-size: 3.8vw;
+      margin-top: 13vw;
+      line-height: 2;
+    }
   }
 
   &__anim {
@@ -30,6 +53,12 @@
     width: 50%;
     left: 0;
     mix-blend-mode: multiply;
+
+    @include mqSm {
+      height: 70%;
+      top: 30%;
+      width: 80%;
+    }
 
     svg {
       width: 100%;

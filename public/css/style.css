@@ -1636,8 +1636,20 @@ li {
   position: relative;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-cheesetart {
+    background-image: url("../image/bg_cheesetart_sp.jpg");
+  }
+}
+
 .p-cheesetart__lead {
   padding: 380px 240px 420px;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-cheesetart__lead {
+    padding: 98vw 16vw 37.5vw;
+  }
 }
 
 .p-cheesetart__head {
@@ -1645,14 +1657,35 @@ li {
   font-weight: normal;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-cheesetart__head {
+    font-size: 6.5vw;
+  }
+}
+
 .p-cheesetart__sub {
   font-size: 2.6rem;
   margin-top: 4.2vw;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-cheesetart__sub {
+    font-size: 4.8vw;
+    margin-top: 8vw;
+  }
+}
+
 .p-cheesetart__text {
   font-size: 2rem;
   margin-top: 4.5vw;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-cheesetart__text {
+    font-size: 3.8vw;
+    margin-top: 13vw;
+    line-height: 2;
+  }
 }
 
 .p-cheesetart__anim {
@@ -1662,6 +1695,14 @@ li {
   width: 50%;
   left: 0;
   mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-cheesetart__anim {
+    height: 70%;
+    top: 30%;
+    width: 80%;
+  }
 }
 
 .p-cheesetart__anim svg {
