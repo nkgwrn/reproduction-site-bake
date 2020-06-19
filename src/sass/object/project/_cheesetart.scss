@@ -3,6 +3,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  overflow-y: hidden;
 
   @include mqSm {
     background-image: url("../image/bg_cheesetart_sp.jpg");

@@ -1,0 +1,30 @@
+.p-mv {
+  background-image: url("../image/img_hero.jpg");
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  z-index: 9;
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 75%);
+
+  @include mqSm {
+    background-image: url("../image/img_hero_sp.jpg");
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 94%;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__anim {
+    height: 120%;
+    position: absolute;
+    top: 0%;
+    width: 50%;
+    left: 0;
+    z-index: 9;
+    mix-blend-mode: multiply;
+  }
+}

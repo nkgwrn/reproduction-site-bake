@@ -1,0 +1,15 @@
+.p-mv-anim {
+  height: 110%;
+  position: absolute;
+  top: 0%;
+  width: 50%;
+  left: 0;
+  z-index: 9;
+  mix-blend-mode: multiply;
+  transition: all 1s ease-out;
+  clip-path: inset(100% 0 0 0);
+
+  &.is-active {
+    clip-path: inset(0);
+  }
+}
