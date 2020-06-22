@@ -19,7 +19,7 @@
     height: 0;
     border-style: solid;
     border-width: 10vw 0 0 calc(100vw - 15px);
-    border-color: #fff transparent transparent transparent;
+    border-color: $color-gray transparent transparent transparent;
 
     @include mqSm {
       transform: rotateY(-180deg);

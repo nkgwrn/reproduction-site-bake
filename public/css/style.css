@@ -804,7 +804,7 @@ li {
   height: 0;
   border-style: solid;
   border-width: 10vw 0 0 calc(100vw - 15px);
-  border-color: #fff transparent transparent transparent;
+  border-color: #f0f0f0 transparent transparent transparent;
 }
 
 @media only screen and (max-width: 480px) {
@@ -847,27 +847,254 @@ li {
   }
 }
 
-.p-philosophy__item {
+.p-philosophy {
+  position: relative;
+  padding-bottom: 10vw;
+  background-color: #f0f0f0;
+}
+
+.p-philosophy::before {
+  content: "";
+  position: absolute;
+  top: -12.5vw;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 12.5vw calc(100vw - 15px);
+  border-color: transparent transparent #f0f0f0 transparent;
+  transform: rotateY(-180deg);
+}
+
+@media only screen and (max-width: 480px) {
+  .p-philosophy::before {
+    top: -35vw;
+    border-width: 0 0 35vw 100vw;
+  }
+}
+
+.p-philosophy__head {
+  margin-bottom: 100px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.p-philosophy__heading {
+  position: relative;
+  display: inline-block;
+  font-size: 4.8rem;
+  font-weight: normal;
+}
+
+.p-philosophy__heading ~ .p-philosophy__heading {
+  top: -55px;
+}
+
+.p-philosophy__heading p {
+  display: inline-block;
+  padding: 0.75em 1.5em;
+  position: relative;
+  z-index: 2;
+}
+
+.p-philosophy__heading span {
+  position: absolute;
+  display: inline-block;
+  background-color: gold;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .p-philosophy__panel {
   width: 50%;
   position: relative;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+
+.p-philosophy__panel ~ .p-philosophy__panel {
+  margin-top: 4vw;
+}
+
+.p-philosophy__panel:nth-child(2) {
+  margin-left: 5vw;
+}
+
+.p-philosophy__panel:nth-child(2) .p-philosophy-card__label {
+  left: -3em;
+  bottom: -1em;
+  top: unset;
+  right: unset;
+}
+
+.p-philosophy__panel:nth-child(3) .p-philosophy-card__label {
+  top: unset;
+  bottom: -1em;
+}
+
+.p-philosophy__panel:hover .p-philosophy-card__panel {
+  -webkit-filter: none;
+  filter: none;
 }
 
 .p-philosophy__panel.is-open {
   width: 54.5%;
 }
 
+.p-philosophy__panel.is-open .p-philosophy-card__label p {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.p-philosophy__panel.is-open .p-philosophy-card__label span {
+  right: 0;
+  left: auto;
+  width: 100%;
+  width: 0;
+}
+
+.p-philosophy__panel.is-open .p-philosophy-card__panel {
+  max-height: 60vw;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.p-philosophy__panel.is-open .p-philosophy-card__toggle::before {
+  right: 0;
+  left: auto;
+  width: 100%;
+}
+
+.p-philosophy__panel.is-open .p-philosophy-card__toggle::after {
+  opacity: 1;
+}
+
+.p-philosophy__body {
+  position: relative;
+}
+
+.p-philosophy__body:last-child {
+  margin-top: 10vw;
+}
+
+.p-philosophy__body:last-child .p-philosophy__panel {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.p-philosophy__body:last-child .p-philosophy__panel .p-philosophy-card__label {
+  left: -3em;
+  right: unset;
+}
+
+.p-philosophy__body:last-child .p-philosophy__panel:nth-child(2) {
+  margin-right: 5vw;
+}
+
+.p-philosophy__body:last-child .p-philosophy__panel:nth-child(2) .p-philosophy-card__label {
+  top: unset;
+  bottom: -1em;
+  right: -3em;
+  left: unset;
+}
+
+.p-philosophy__body:last-child .p-philosophy__lead {
+  right: unset;
+  left: 0;
+}
+
+.p-philosophy__body:last-child .p-philosophy__jp {
+  right: unset;
+  left: 12rem;
+  top: 0;
+}
+
+.p-philosophy__body:last-child .p-philosophy__en {
+  text-align: left;
+  right: unset;
+  left: 0;
+  top: 2rem;
+}
+
+.p-philosophy__lead {
+  width: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.p-philosophy__jp {
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  position: absolute;
+  top: 4rem;
+  right: 12rem;
+  word-break: keep-all;
+  font-size: 2.4rem;
+  z-index: 2;
+  line-height: 2;
+}
+
+.p-philosophy__en {
+  font-size: 12rem;
+  letter-spacing: 0.2em;
+  color: gold;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: right;
+  line-height: 1.2;
+}
+
+.p-philosophy__en span {
+  display: block;
+}
+
+.p-philosophy-card {
+  position: relative;
+}
+
 .p-philosophy-card__label {
-  background-color: gold;
   padding: 1.5em 2.5em;
   display: inline-block;
   font-size: 2.4rem;
   position: absolute;
   right: -3em;
   top: -2em;
+  z-index: 3;
+}
+
+.p-philosophy-card__label p {
+  position: relative;
+  z-index: 2;
+  transition: 0.3s all ease;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.p-philosophy-card__label span {
+  position: absolute;
+  display: inline-block;
+  background-color: gold;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: 0.5s 0.5s all ease;
+}
+
+.p-philosophy-card__panel {
+  max-height: 10vw;
+  transition: 0.5s all ease;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  overflow: hidden;
 }
 
 .p-philosophy-card__thumb {
@@ -885,6 +1112,14 @@ li {
   background-image: url("../image/img_philosophy_01.jpg");
 }
 
+.p-philosophy-card__thumb--02 {
+  background-image: url("../image/img_philosophy_02.jpg");
+}
+
+.p-philosophy-card__thumb--03 {
+  background-image: url("../image/img_philosophy_03.jpg");
+}
+
 .p-philosophy-card__body {
   font-size: 1.8rem;
   padding: 2.75em 3em;
@@ -900,11 +1135,46 @@ li {
   line-height: 2;
 }
 
+.p-philosophy-card__toggle {
+  top: 0;
+  right: 0;
+  padding: 0;
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+  position: absolute;
+}
+
+.p-philosophy-card__toggle::before, .p-philosophy-card__toggle::after {
+  position: absolute;
+  transition: 0.5s all ease;
+}
+
+.p-philosophy-card__toggle::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #000;
+}
+
+.p-philosophy-card__toggle::after {
+  content: "×";
+  display: inline-block;
+  font-size: 4rem;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
 .p-howtoeat {
   background-color: gold;
   font-size: 1.6rem;
   position: relative;
   margin-top: 280px;
+  padding-bottom: 12.5vw;
 }
 
 @media only screen and (max-width: 480px) {
