@@ -48,19 +48,6 @@
     }
   }
 
-  &__item {
-    width: 48%;
-    position: relative;
-
-    @include mqSm {
-      width: 100%;
-    }
-
-    & ~ & {
-      margin-top: 18em;
-    }
-  }
-
   &__piece,
   &__price {
     position: relative;
@@ -72,6 +59,9 @@
       position: relative;
       z-index: 2;
       color: #fff;
+      transition: all 1s 0.3s ease;
+      opacity: 0;
+      transform: translateX(-5%);
     }
 
     > span {
@@ -83,6 +73,8 @@
       left: 0;
       top: 0;
       z-index: 1;
+      clip-path: inset(0 100% 0 0);
+      transition: all 1s ease-out;
     }
   }
 
@@ -126,6 +118,7 @@
     background-size: cover;
     background-position: center;
     margin-top: -2vw;
+    transition: all 0.3s ease-out;
 
     @include mqSm {
       margin-top: -5vw;
@@ -139,12 +132,12 @@
 
     &--01 {
       background-image: url("../image/img_price_01.jpg");
-      clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
+      clip-path: polygon(0% 0%, 0% 0%, 5% 100%, 5% 100%);
     }
 
     &--02 {
       background-image: url("../image/img_price_02.jpg");
-      clip-path: polygon(0 0, 95% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
     }
   }
 
@@ -152,10 +145,56 @@
     font-size: 1.6rem;
     line-height: 2;
     margin-top: 6em;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(2vw);
 
     @include mqSm {
       font-size: 2vw;
       margin-top: 30vw;
+    }
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__item {
+    width: 48%;
+    position: relative;
+
+    @include mqSm {
+      width: 100%;
+    }
+
+    & ~ & {
+      margin-top: 18em;
+    }
+
+    &.is-active {
+      .p-price {
+        &__price > span,
+        &__piece > span {
+          clip-path: inset(0);
+        }
+
+        &__thumb {
+          &--01 {
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 5% 100%);
+          }
+
+          &--02 {
+            clip-path: polygon(0 0, 95% 0%, 100% 100%, 0% 100%);
+          }
+        }
+
+        &__price > p,
+        &__piece > p {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
     }
   }
 }

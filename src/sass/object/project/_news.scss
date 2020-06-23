@@ -22,10 +22,28 @@
 
   &__head {
     padding-top: 6em;
+
+    h2 {
+      transition: all 1s ease;
+      opacity: 0;
+      transform: translateY(10%);
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   &__body {
     margin-top: 3em;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(10%);
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &__list {
@@ -142,6 +160,14 @@
 
   &__btn {
     margin-top: 6em;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(10%);
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     a {
       max-width: 255px;

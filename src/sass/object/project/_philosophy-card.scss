@@ -9,6 +9,8 @@
     right: -3em;
     top: -2em;
     z-index: 3;
+    clip-path: inset(0 100% 0 0);
+    transition: all 0.5s ease-out;
 
     @include mqSm {
       font-size: 3.8vw;
@@ -44,6 +46,7 @@
     transition: 0.5s all ease;
     filter: grayscale(1);
     overflow: hidden;
+    clip-path: inset(100% 0 0 0);
 
     @include mqSm {
       max-height: 24vw;
@@ -147,6 +150,18 @@
         font-size: 3rem;
         line-height: 1;
       }
+    }
+  }
+}
+
+.p-philosophy__body.is-active {
+  .p-philosophy-card {
+    &__label {
+      clip-path: inset(0);
+    }
+
+    &__panel {
+      animation: animation-panel 1s ease-out normal forwards;
     }
   }
 }

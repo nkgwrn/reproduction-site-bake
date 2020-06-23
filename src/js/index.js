@@ -1,5 +1,5 @@
-import { test1 } from "./component/test1";
+import scrollAnim from "./component/scrollAnim";
 import test2 from "./component/test2";
 
-test1();
+scrollAnim();
 test2();

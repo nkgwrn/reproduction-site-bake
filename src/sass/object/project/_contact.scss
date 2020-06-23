@@ -40,6 +40,16 @@
 
   &__head {
     padding-top: 12em;
+
+    h2 {
+      transition: all 1s ease;
+      opacity: 0;
+      transform: translateY(10%);
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }
 
   &__lead {
@@ -70,6 +80,14 @@
 
   &__item {
     font-size: 2rem; // TODO:1440px->1.8rem
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(10%);
+
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     @include mqSm {
       font-size: 3.2vw;
@@ -96,6 +114,13 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      transition: all 1s ease;
+      opacity: 0;
+      transform: translateY(10%);
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
 
       > dd ~ * {
         padding-top: 2em;

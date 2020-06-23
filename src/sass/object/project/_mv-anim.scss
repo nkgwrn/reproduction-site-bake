@@ -6,10 +6,11 @@
   left: 0;
   z-index: 9;
   mix-blend-mode: multiply;
-  transition: all 1s ease-out;
+  transition: all 1s 0.5s ease-out;
   clip-path: inset(100% 0 0 0);
 
-  &.is-active {
-    clip-path: inset(0);
+  @include mqSm {
+    height: 98%;
+    width: 70%;
   }
 }

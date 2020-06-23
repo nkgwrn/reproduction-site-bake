@@ -1,13 +1,15 @@
 .p-mv {
   background-image: url("../image/img_hero.jpg");
   background-position: center top;
-  background-size: cover;
+  background-size: 110%;
   position: relative;
   z-index: 9;
   clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 75%);
+  transition: all 1.5s ease;
 
   @include mqSm {
     background-image: url("../image/img_hero_sp.jpg");
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 85%);
   }
 
   &::before {
@@ -16,6 +18,10 @@
     padding-top: 94%;
     width: 100%;
     height: 100%;
+
+    @include mqSm {
+      padding-top: 234%;
+    }
   }
 
   &__anim {

@@ -7,6 +7,7 @@
 
   @include mqSm {
     background-image: url("../image/bg_cheesetart_sp.jpg");
+    margin-top: -35vw;
   }
 
   &__lead {
@@ -20,6 +21,9 @@
   &__head {
     font-size: 3.6rem;
     font-weight: normal;
+    transition: all 1s 1.5s ease;
+    opacity: 0;
+    transform: translateY(10%);
 
     @include mqSm {
       font-size: 6.5vw;
@@ -34,11 +38,25 @@
       font-size: 4.8vw;
       margin-top: 8vw;
     }
+
+    span {
+      transition: all 1s 2s ease;
+      opacity: 0;
+      transform: translateY(10%);
+      display: inline-block;
+
+      + span {
+        transition-delay: 2.5s;
+      }
+    }
   }
 
   &__text {
     font-size: 2rem;
     margin-top: 4.5vw;
+    transition: all 1.5s 3.2s ease;
+    opacity: 0;
+    transform: translateY(20%);
 
     @include mqSm {
       font-size: 3.8vw;
@@ -54,6 +72,8 @@
     width: 50%;
     left: 0;
     mix-blend-mode: multiply;
+    transition: all 1.5s 1s ease-out;
+    clip-path: inset(100% 0 0 0);
 
     @include mqSm {
       height: 70%;
@@ -67,6 +87,23 @@
       top: 0;
       left: 0;
       z-index: 7;
+    }
+  }
+
+  &.is-active {
+    animation: animation-cheese 1.2s ease-in normal forwards;
+
+    .p-cheesetart {
+      &__anim {
+        clip-path: inset(0);
+      }
+
+      &__head,
+      &__sub span,
+      &__text {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 }

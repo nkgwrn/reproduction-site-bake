@@ -12,6 +12,10 @@
   }
 
   &__item {
+    transition: all 1s 0.3s ease;
+    opacity: 0;
+    padding-top: 3em;
+
     &:nth-child(2) {
       margin-top: 6rem;
 
@@ -31,6 +35,19 @@
 
       @include mqSm {
         margin-top: 9vw;
+      }
+    }
+
+    &.is-active {
+      opacity: 1;
+      padding-top: 0;
+
+      .p-howtoeat-card {
+        &__img,
+        &__body {
+          transform: translateY(0);
+          opacity: 1;
+        }
       }
     }
   }
@@ -99,9 +116,16 @@
 
   &__img {
     padding-top: 6em;
+    transform: translateY(2vw);
+    transition: all 1s 0.8s ease;
+    opacity: 0;
   }
 
   &__body {
+    transform: translateY(2vw);
+    transition: all 1s 1s ease;
+    opacity: 0;
+
     @include mqSm {
       font-size: 3.2vw;
     }
