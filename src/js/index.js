@@ -1,5 +1,5 @@
 import scrollAnim from "./component/scrollAnim";
-import test2 from "./component/philosophyPanel";
+import philosophyPanel from "./component/philosophyPanel";
 
 scrollAnim();
-test2();
+philosophyPanel();
