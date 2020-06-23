@@ -1,4 +1,4 @@
-const test2 = () => {
+const philosophyPanel = () => {
   const PhilosophyPanels = document.querySelectorAll(".js-philosophy-panel");
 
   PhilosophyPanels.forEach((panel) => {
@@ -9,4 +9,4 @@ const test2 = () => {
   });
 };
 
-export default test2;
+export default philosophyPanel;
