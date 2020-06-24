@@ -164,4 +164,8 @@
       animation: animation-panel 1s ease-out normal forwards;
     }
   }
+
+  .p-philosophy__panel:nth-child(2) .p-philosophy-card__panel {
+    animation: animation-panel-reverse 1s ease-out normal forwards;
+  }
 }

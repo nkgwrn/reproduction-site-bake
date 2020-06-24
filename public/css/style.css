@@ -426,6 +426,76 @@ li {
   }
 }
 
+@-webkit-keyframes animation-panel-reverse {
+  0% {
+    -webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);
+  }
+  10% {
+    -webkit-clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  20% {
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 90% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 90% 100%);
+  }
+  30% {
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+  }
+  40% {
+    -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+  70% {
+    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+  }
+}
+
+@keyframes animation-panel-reverse {
+  0% {
+    -webkit-clip-path: inset(100% 0 0 0);
+    clip-path: inset(100% 0 0 0);
+  }
+  10% {
+    -webkit-clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%);
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  20% {
+    -webkit-clip-path: polygon(50% 0, 100% 0, 100% 100%, 90% 100%);
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 90% 100%);
+  }
+  30% {
+    -webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+  }
+  40% {
+    -webkit-clip-path: polygon(20% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 50% 100%);
+  }
+  70% {
+    -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%);
+  }
+  90% {
+    -webkit-clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    -webkit-clip-path: inset(0);
+    clip-path: inset(0);
+  }
+}
+
 @font-face {
   font-family: "Rockwell";
   src: url("../font/rockwen.ttf") format("truetype");
@@ -1535,6 +1605,11 @@ li {
   animation: animation-panel 1s ease-out normal forwards;
 }
 
+.p-philosophy__body.is-active .p-philosophy__panel:nth-child(2) .p-philosophy-card__panel {
+  -webkit-animation: animation-panel-reverse 1s ease-out normal forwards;
+  animation: animation-panel-reverse 1s ease-out normal forwards;
+}
+
 .p-howtoeat {
   background-color: gold;
   font-size: 1.6rem;
@@ -2382,10 +2457,11 @@ li {
 
 .p-cheesetart {
   background-image: url("../image/bg_cheesetart.jpg");
-  background-position: center;
-  background-size: cover;
+  background-position: right top;
+  background-size: 110%;
   position: relative;
   overflow-y: hidden;
+  transition: all 1.5s ease;
 }
 
 @media only screen and (max-width: 480px) {
@@ -2489,6 +2565,7 @@ li {
 .p-cheesetart.is-active {
   -webkit-animation: animation-cheese 1.2s ease-in normal forwards;
   animation: animation-cheese 1.2s ease-in normal forwards;
+  background-size: 100%;
 }
 
 .p-cheesetart.is-active .p-cheesetart__anim {
@@ -2504,13 +2581,13 @@ li {
 
 .p-mv {
   background-image: url("../image/img_hero.jpg");
-  background-position: center top;
-  background-size: 110%;
+  background-position: left top;
+  background-size: 120%;
   position: relative;
   z-index: 9;
   -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 75%);
   clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 75%);
-  transition: all 1.5s ease;
+  transition: all 2s ease;
 }
 
 @media only screen and (max-width: 480px) {
@@ -2594,6 +2671,59 @@ li {
 .p-top.is-active .p-mv-anim {
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
+}
+
+.p-gnav {
+  position: fixed;
+  z-index: 21;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.p-gnav li {
+  display: block;
+  width: 8px;
+  height: 8px;
+  margin: 24px 0;
+}
+
+.p-gnav li a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.p-gnav li a span {
+  position: absolute;
+  right: 3vw;
+  top: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 200px;
+  font-size: 1.4rem;
+  text-align: right;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+
+.p-gnav li a.is-current {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.p-gnav li a:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.p-gnav li a:hover span {
+  opacity: 1;
+  right: 2vw;
 }
 
 /* ---------------------------------------------------------

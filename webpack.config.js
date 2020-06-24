@@ -1,3 +1,4 @@
+const webpack = require("webpack");
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
@@ -10,4 +11,9 @@ module.exports = {
     path: __dirname + "/public/js",
     filename: "bundle.js",
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+    }),
+  ],
 };

@@ -2,7 +2,8 @@
 <html lang="ja">
   <%- include('../components/_head'); %>
   <body id="wrapper">
-    <div class="p-top js-opening">
+    <%- include('../components/_gnav'); %>
+    <div class="p-top js-opening" id="top">
       <%- include('../components/_mv'); %>
       <div class="p-mv-anim">
         <svg
@@ -16,28 +17,28 @@
         </svg>
       </div>
     </div>
-    <section class="c-panel">
+    <section class="c-panel" id="cheesetart">
       <%- include('../components/_cheesetart'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="essence">
       <%- include('../components/_essence'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="price">
       <%- include('../components/_price'); %>
     </section>
-    <section class="c-panel" style="margin-top: -20.5vw;">
+    <section class="c-panel" style="margin-top: -20.5vw;" id="howtoeat">
       <%- include('../components/_howtoeat'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="philosophy">
       <%- include('../components/_philosophy'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="shops">
       <%- include('../components/_shops'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="news">
       <%- include('../components/_news'); %>
     </section>
-    <section class="c-panel">
+    <section class="c-panel" id="contact">
       <%- include('../components/_contact'); %>
     </section>
     <%- include('../components/_footer'); %>

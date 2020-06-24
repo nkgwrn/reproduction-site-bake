@@ -1,9 +1,10 @@
 .p-cheesetart {
   background-image: url("../image/bg_cheesetart.jpg");
-  background-position: center;
-  background-size: cover;
+  background-position: right top;
+  background-size: 110%;
   position: relative;
   overflow-y: hidden;
+  transition: all 1.5s ease;
 
   @include mqSm {
     background-image: url("../image/bg_cheesetart_sp.jpg");
@@ -92,6 +93,7 @@
 
   &.is-active {
     animation: animation-cheese 1.2s ease-in normal forwards;
+    background-size: 100%;
 
     .p-cheesetart {
       &__anim {
