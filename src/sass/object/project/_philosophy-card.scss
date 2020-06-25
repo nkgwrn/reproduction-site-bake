@@ -10,7 +10,7 @@
     top: -2em;
     z-index: 3;
     clip-path: inset(0 100% 0 0);
-    transition: all 0.5s ease-out;
+    transition: all 0.5s 1s ease-out;
 
     @include mqSm {
       font-size: 3.8vw;
@@ -161,11 +161,11 @@
     }
 
     &__panel {
-      animation: animation-panel 1s ease-out normal forwards;
+      animation: animation-panel 1s 1.5s ease-out normal forwards;
     }
   }
 
   .p-philosophy__panel:nth-child(2) .p-philosophy-card__panel {
-    animation: animation-panel-reverse 1s ease-out normal forwards;
+    animation: animation-panel-reverse 1s 1.5s ease-out normal forwards;
   }
 }

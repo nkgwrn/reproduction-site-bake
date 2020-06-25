@@ -118,3 +118,12 @@
     clip-path: inset(0);
   }
 }
+
+@keyframes arrow-move {
+  0% {
+    right: -0.5em;
+  }
+  100% {
+    right: -0.75em;
+  }
+}

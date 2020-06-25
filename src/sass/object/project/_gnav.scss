@@ -5,6 +5,10 @@
   top: 50%;
   transform: translateY(-50%);
 
+  @include mqSm {
+    display: none;
+  }
+
   li {
     display: block;
     width: 8px;

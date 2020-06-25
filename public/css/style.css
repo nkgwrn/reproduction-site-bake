@@ -496,6 +496,24 @@ li {
   }
 }
 
+@-webkit-keyframes arrow-move {
+  0% {
+    right: -0.5em;
+  }
+  100% {
+    right: -0.75em;
+  }
+}
+
+@keyframes arrow-move {
+  0% {
+    right: -0.5em;
+  }
+  100% {
+    right: -0.75em;
+  }
+}
+
 @font-face {
   font-family: "Rockwell";
   src: url("../font/rockwen.ttf") format("truetype");
@@ -975,7 +993,7 @@ li {
 
 .p-shops {
   height: 62vw;
-  background-image: url("../image/img_shops.jpg");
+  background-image: url("../image/img_shops_before.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -998,6 +1016,7 @@ li {
   border-style: solid;
   border-width: 10vw 0 0 calc(100vw - 15px);
   border-color: #f0f0f0 transparent transparent transparent;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1007,11 +1026,26 @@ li {
   }
 }
 
+.p-shops::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/img_shops.jpg");
+  -webkit-clip-path: inset(0 100% 0 0);
+  clip-path: inset(0 100% 0 0);
+  transition: all 0.8s 0.5s ease-out;
+  z-index: 0;
+}
+
 .p-shops__link {
   display: inline-block;
   color: #fff;
   transition: opacity 0.3s ease;
   position: relative;
+  z-index: 5;
 }
 
 .p-shops__link::before {
@@ -1026,6 +1060,8 @@ li {
   transform-origin: left bottom;
   top: 25%;
   right: -0.5em;
+  -webkit-animation: arrow-move 1s ease-in infinite alternate;
+  animation: arrow-move 1s ease-in infinite alternate;
 }
 
 @media (hover: hover) {
@@ -1038,6 +1074,11 @@ li {
   .p-shops__link:hover::before {
     opacity: 0.6;
   }
+}
+
+.p-shops.is-active::after {
+  -webkit-clip-path: inset(0);
+  clip-path: inset(0);
 }
 
 .p-philosophy {
@@ -1439,7 +1480,7 @@ li {
   z-index: 3;
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s 1s ease-out;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1601,13 +1642,13 @@ li {
 }
 
 .p-philosophy__body.is-active .p-philosophy-card__panel {
-  -webkit-animation: animation-panel 1s ease-out normal forwards;
-  animation: animation-panel 1s ease-out normal forwards;
+  -webkit-animation: animation-panel 1s 1.5s ease-out normal forwards;
+  animation: animation-panel 1s 1.5s ease-out normal forwards;
 }
 
 .p-philosophy__body.is-active .p-philosophy__panel:nth-child(2) .p-philosophy-card__panel {
-  -webkit-animation: animation-panel-reverse 1s ease-out normal forwards;
-  animation: animation-panel-reverse 1s ease-out normal forwards;
+  -webkit-animation: animation-panel-reverse 1s 1.5s ease-out normal forwards;
+  animation: animation-panel-reverse 1s 1.5s ease-out normal forwards;
 }
 
 .p-howtoeat {
@@ -2659,6 +2700,125 @@ li {
   z-index: 10;
 }
 
+.p-top__spnav {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-top__spnav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19vw;
+    height: 19vw;
+    background: #000;
+    font-size: 7vw;
+    color: #fff;
+  }
+}
+
+.p-top__logo {
+  position: absolute;
+  z-index: 11;
+  top: 6vw;
+  left: 6vw;
+  width: 7vw;
+  opacity: 0;
+  transition: 0.8s 1s opacity ease;
+}
+
+.p-top__nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  font-size: 1.6rem;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-top__nav {
+    font-size: 3.6vw;
+  }
+}
+
+.p-top__nav > * ~ * * {
+  width: 160px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-top__nav > * ~ * * {
+    width: 19vw;
+    height: 19vw;
+    top: calc(19vw + 1px);
+  }
+}
+
+.p-top__lang {
+  height: 56px;
+  position: absolute;
+  top: 0;
+  right: 161px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-top__lang {
+    display: none;
+  }
+}
+
+.p-top__lang::after {
+  content: "▼";
+  font-size: 0.6em;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.p-top__lang i {
+  margin-right: 0.5em;
+}
+
+.p-top__navlink {
+  text-align: center;
+  background: #000;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+  .p-top__navlink:hover {
+    opacity: 0.8;
+  }
+}
+
+.p-top__navlink ~ .p-top__navlink {
+  margin-top: 1px;
+  top: 56px;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-top__navlink ~ .p-top__navlink {
+    top: calc(38vw + 1px);
+  }
+}
+
+.p-top.is-active .p-top__logo {
+  opacity: 1;
+}
+
 .p-top.is-active::before {
   -webkit-animation: animation-mv 1s ease-out normal forwards;
   animation: animation-mv 1s ease-out normal forwards;
@@ -2679,6 +2839,12 @@ li {
   right: 2%;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 480px) {
+  .p-gnav {
+    display: none;
+  }
 }
 
 .p-gnav li {
