@@ -1006,7 +1006,6 @@ li {
   justify-content: center;
   position: relative;
   transition: opacity 1s ease;
-  opacity: 0;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1055,6 +1054,9 @@ li {
   transition: opacity 0.3s ease;
   position: relative;
   z-index: 5;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.5s all 1.5s ease;
 }
 
 .p-shops__link::before {
@@ -1085,13 +1087,14 @@ li {
   }
 }
 
-.p-shops.is-active {
-  opacity: 1;
-}
-
 .p-shops.is-active::after {
   -webkit-clip-path: inset(0);
   clip-path: inset(0);
+}
+
+.p-shops.is-active .p-shops__link {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .p-philosophy {
@@ -1210,13 +1213,12 @@ li {
   z-index: 1;
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
-  transition: all 1s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .p-philosophy__panel {
   width: 50%;
   position: relative;
-  transition: 0.5s all ease;
   cursor: pointer;
 }
 
@@ -1254,6 +1256,7 @@ li {
   bottom: -1em;
   top: unset;
   right: unset;
+  transition-delay: 1.3s;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1266,6 +1269,7 @@ li {
 .p-philosophy__panel:nth-child(3) .p-philosophy-card__label {
   top: unset;
   bottom: -1em;
+  transition-delay: 1.6s;
 }
 
 .p-philosophy__panel:hover .p-philosophy-card__panel {
@@ -1660,8 +1664,13 @@ li {
 }
 
 .p-philosophy__body.is-active .p-philosophy__panel:nth-child(2) .p-philosophy-card__panel {
-  -webkit-animation: animation-panel-reverse 1s 1.5s ease-out normal forwards;
-  animation: animation-panel-reverse 1s 1.5s ease-out normal forwards;
+  -webkit-animation: animation-panel-reverse 1s 1.8s ease-out normal forwards;
+  animation: animation-panel-reverse 1s 1.8s ease-out normal forwards;
+}
+
+.p-philosophy__body.is-active .p-philosophy__panel:nth-child(3) .p-philosophy-card__panel {
+  -webkit-animation: animation-panel-reverse 1s 2.1s ease-out normal forwards;
+  animation: animation-panel-reverse 1s 2.1s ease-out normal forwards;
 }
 
 .p-howtoeat {
@@ -1912,6 +1921,12 @@ li {
   transform: translateY(2vw);
   transition: all 1s 0.8s ease;
   opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat-card__img {
+    padding-top: 3em;
+  }
 }
 
 .p-howtoeat-card__body {
@@ -2728,6 +2743,31 @@ li {
     font-size: 7vw;
     color: #fff;
   }
+}
+
+.p-top__spnav span {
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  position: relative;
+}
+
+.p-top__spnav span::before, .p-top__spnav span::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background: #fff;
+  left: 0;
+}
+
+.p-top__spnav span::before {
+  top: -7px;
+}
+
+.p-top__spnav span::after {
+  top: 7px;
 }
 
 .p-top__logo {

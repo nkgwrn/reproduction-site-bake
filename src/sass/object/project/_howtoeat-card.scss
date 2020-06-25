@@ -119,6 +119,10 @@
     transform: translateY(2vw);
     transition: all 1s 0.8s ease;
     opacity: 0;
+
+    @include mqSm {
+      padding-top: 3em;
+    }
   }
 
   &__body {

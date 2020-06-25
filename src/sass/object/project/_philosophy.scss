@@ -105,14 +105,13 @@
       top: 0;
       z-index: 1;
       clip-path: inset(0 100% 0 0);
-      transition: all 1s ease-out;
+      transition: all 0.5s ease-out;
     }
   }
 
   &__panel {
     width: 50%;
     position: relative;
-    transition: 0.5s all ease;
     cursor: pointer;
 
     @include mqSm {
@@ -142,6 +141,7 @@
         bottom: -1em;
         top: unset;
         right: unset;
+        transition-delay: 1.3s;
 
         @include mqSm {
           right: -2.3em;
@@ -154,6 +154,7 @@
       .p-philosophy-card__label {
         top: unset;
         bottom: -1em;
+        transition-delay: 1.6s;
       }
     }
 

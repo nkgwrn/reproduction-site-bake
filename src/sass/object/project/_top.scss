@@ -27,6 +27,32 @@
       font-size: 7vw;
       color: #fff;
     }
+
+    span {
+      width: 20px;
+      height: 1px;
+      background: #fff;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        background: #fff;
+        left: 0;
+      }
+
+      &::before {
+        top: -7px;
+      }
+
+      &::after {
+        top: 7px;
+      }
+    }
   }
 
   &__logo {

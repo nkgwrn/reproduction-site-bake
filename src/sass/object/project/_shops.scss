@@ -6,7 +6,6 @@
   justify-content: center;
   position: relative;
   transition: opacity 1s ease;
-  opacity: 0;
 
   @include mqSm {
     height: 126vw;
@@ -49,6 +48,9 @@
     transition: opacity 0.3s ease;
     position: relative;
     z-index: 5;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s all 1.5s ease;
 
     &::before {
       content: "";
@@ -81,10 +83,13 @@
   }
 
   &.is-active {
-    opacity: 1;
-
     &::after {
       clip-path: inset(0);
+    }
+
+    .p-shops__link {
+      transform: translateX(0);
+      opacity: 1;
     }
   }
 }
