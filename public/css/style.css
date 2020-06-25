@@ -215,7 +215,14 @@ body {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.01em;
   line-height: 1.65;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body.is-active {
+  height: auto;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 @media all and (-ms-high-contrast: none) {
@@ -998,6 +1005,8 @@ li {
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: opacity 1s ease;
+  opacity: 0;
 }
 
 @media only screen and (max-width: 480px) {
@@ -1036,7 +1045,7 @@ li {
   background-image: url("../image/img_shops.jpg");
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
-  transition: all 0.8s 0.5s ease-out;
+  transition: all 0.8s 1s ease-out;
   z-index: 0;
 }
 
@@ -1074,6 +1083,10 @@ li {
   .p-shops__link:hover::before {
     opacity: 0.6;
   }
+}
+
+.p-shops.is-active {
+  opacity: 1;
 }
 
 .p-shops.is-active::after {
@@ -2727,6 +2740,14 @@ li {
   transition: 0.8s 1s opacity ease;
 }
 
+@media only screen and (max-width: 480px) {
+  .p-top__logo {
+    top: 7vw;
+    left: 7vw;
+    width: 9.5vw;
+  }
+}
+
 .p-top__nav {
   position: absolute;
   right: 0;
@@ -2789,6 +2810,9 @@ li {
 
 .p-top__lang i {
   margin-right: 0.5em;
+  position: static;
+  height: auto;
+  width: auto;
 }
 
 .p-top__navlink {

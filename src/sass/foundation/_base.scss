@@ -10,7 +10,14 @@ body {
   -webkit-text-size-adjust: 100%;
   letter-spacing: 0.01em;
   line-height: $line-height-default;
-  overflow-x: hidden;
+  height: 100vh;
+  overflow: hidden;
+
+  &.is-active {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
 }
 
 @media all and (-ms-high-contrast: none) {

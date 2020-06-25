@@ -5,6 +5,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  transition: opacity 1s ease;
+  opacity: 0;
 
   @include mqSm {
     height: 126vw;
@@ -37,7 +39,7 @@
     height: 100%;
     background-image: url("../image/img_shops.jpg");
     clip-path: inset(0 100% 0 0);
-    transition: all 0.8s 0.5s ease-out;
+    transition: all 0.8s 1s ease-out;
     z-index: 0;
   }
 
@@ -79,6 +81,8 @@
   }
 
   &.is-active {
+    opacity: 1;
+
     &::after {
       clip-path: inset(0);
     }

@@ -37,6 +37,12 @@
     width: 7vw;
     opacity: 0;
     transition: 0.8s 1s opacity ease;
+
+    @include mqSm {
+      top: 7vw;
+      left: 7vw;
+      width: 9.5vw;
+    }
   }
 
   &__nav {
@@ -96,6 +102,9 @@
 
     i {
       margin-right: 0.5em;
+      position: static;
+      height: auto;
+      width: auto;
     }
   }
 
