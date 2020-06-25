@@ -1,6 +1,5 @@
 const scrollAnim = () => {
   const openingAnims = document.querySelectorAll(".js-opening");
-  console.log(openingAnims);
 
   var scrollAnimFunc = function () {
     for (var i = 0; i < openingAnims.length; i++) {

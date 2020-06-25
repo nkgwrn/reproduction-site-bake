@@ -3,7 +3,6 @@ const philosophyPanel = () => {
 
   PhilosophyPanels.forEach((panel) => {
     panel.addEventListener("click", () => {
-      console.log(panel);
       panel.classList.toggle("is-open");
     });
   });

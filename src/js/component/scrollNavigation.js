@@ -1,7 +1,6 @@
 const scrollnavigation = () => {
   $(function () {
     var navLink = $("#gnav li a");
-    console.log(navLink);
 
     var contentsArr = new Array();
     for (var i = 0; i < navLink.length; i++) {
