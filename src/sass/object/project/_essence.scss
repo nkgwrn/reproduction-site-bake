@@ -266,6 +266,12 @@
           }
         }
       }
+
+      &.is-active {
+        .p-essence__img {
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+        }
+      }
     }
 
     &.is-active {
@@ -283,12 +289,6 @@
         &__heading p {
           opacity: 1;
           transform: translateY(0);
-        }
-
-        &__panel:last-child {
-          .p-essence__img {
-            clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-          }
         }
       }
     }

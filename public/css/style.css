@@ -2729,6 +2729,11 @@ li {
   }
 }
 
+.p-essence__panel:last-child.is-active .p-essence__img {
+  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+}
+
 .p-essence__panel.is-active .p-essence__ttl,
 .p-essence__panel.is-active .p-essence__heading span {
   -webkit-clip-path: inset(0);
@@ -2744,11 +2749,6 @@ li {
 .p-essence__panel.is-active .p-essence__heading p {
   opacity: 1;
   transform: translateY(0);
-}
-
-.p-essence__panel.is-active .p-essence__panel:last-child .p-essence__img {
-  -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-  clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .p-footer {
