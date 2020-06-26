@@ -61,8 +61,21 @@
     top: 6vw;
     left: 6vw;
     width: 7vw;
-    opacity: 0;
-    transition: 0.8s 1s opacity ease;
+
+    .logo_mark {
+      opacity: 0;
+      transition: opacity 0.3s 1.5s ease;
+    }
+
+    .bake_elem {
+      opacity: 0;
+    }
+
+    .cheese_tart {
+      opacity: 0;
+      transform: translateY(100%);
+      transition: all 1s 1.5s ease;
+    }
 
     @include mqSm {
       top: 7vw;
@@ -158,7 +171,34 @@
 
   &.is-active {
     .p-top__logo {
-      opacity: 1;
+      .logo_mark {
+        opacity: 1;
+      }
+
+      .bake_elem {
+        animation: pop ease-out 3s forwards;
+      }
+
+      .bake_elem--b {
+        animation-delay: 1.5s;
+      }
+
+      .bake_elem--a {
+        animation-delay: 1.6s;
+      }
+
+      .bake_elem--k {
+        animation-delay: 1.7s;
+      }
+
+      .bake_elem--e {
+        animation-delay: 1.8s;
+      }
+
+      .cheese_tart {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     &::before {

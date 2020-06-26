@@ -127,3 +127,18 @@
     right: -0.75em;
   }
 }
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 0.7);
+    transform-origin: center;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+  15% {
+    transform: scale3d(1, 1, 1);
+  }
+}

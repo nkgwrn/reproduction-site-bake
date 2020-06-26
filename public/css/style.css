@@ -521,6 +521,36 @@ li {
   }
 }
 
+@-webkit-keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 0.7);
+    transform-origin: center;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+  15% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.7, 0.7, 0.7);
+    transform-origin: center;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+  15% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @font-face {
   font-family: "Rockwell";
   src: url("../font/rockwen.ttf") format("truetype");
@@ -2776,8 +2806,21 @@ li {
   top: 6vw;
   left: 6vw;
   width: 7vw;
+}
+
+.p-top__logo .logo_mark {
   opacity: 0;
-  transition: 0.8s 1s opacity ease;
+  transition: opacity 0.3s 1.5s ease;
+}
+
+.p-top__logo .bake_elem {
+  opacity: 0;
+}
+
+.p-top__logo .cheese_tart {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1s 1.5s ease;
 }
 
 @media only screen and (max-width: 480px) {
@@ -2879,8 +2922,38 @@ li {
   }
 }
 
-.p-top.is-active .p-top__logo {
+.p-top.is-active .p-top__logo .logo_mark {
   opacity: 1;
+}
+
+.p-top.is-active .p-top__logo .bake_elem {
+  -webkit-animation: pop ease-out 3s forwards;
+  animation: pop ease-out 3s forwards;
+}
+
+.p-top.is-active .p-top__logo .bake_elem--b {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.p-top.is-active .p-top__logo .bake_elem--a {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.p-top.is-active .p-top__logo .bake_elem--k {
+  -webkit-animation-delay: 1.7s;
+  animation-delay: 1.7s;
+}
+
+.p-top.is-active .p-top__logo .bake_elem--e {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.p-top.is-active .p-top__logo .cheese_tart {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .p-top.is-active::before {
