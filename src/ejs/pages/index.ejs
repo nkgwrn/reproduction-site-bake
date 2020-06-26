@@ -2,7 +2,8 @@
 <html lang="ja">
   <%- include('../components/_head'); %>
   <body id="wrapper">
-    <%- include('../components/_gnav'); %>
+    <%- include('../components/_gnav'); %> <%-
+    include('../components/_floatmenu'); %>
     <div class="p-top js-opening" id="top">
       <%- include('../components/_mv'); %>
       <div class="p-mv-anim">
@@ -17,40 +18,31 @@
         </svg>
       </div>
       <div class="p-top__logo js-opening">
-         <%- include('../images/_logo'); %>
+        <%- include('../images/_logo'); %>
       </div>
-      <ul class="p-top__nav u-font-furuta">
-        <li class="p-top__spnav"><span></span></li>
-        <li class="p-top__navlink p-top__lang"><i class="fas fa-globe"></i>JP</li>
-        <li>
-          <div class="p-top__navlink">SHOPS</div>
-          <div class="p-top__navlink">ONLINE SHOP</div>
-        </li>
-      </ul>
     </div>
-    </>
-    <section class="c-panel" id="cheesetart">
+    <section class="c-panel">
       <%- include('../components/_cheesetart'); %>
     </section>
-    <section class="c-panel" id="essence">
+    <section class="c-panel">
       <%- include('../components/_essence'); %>
     </section>
-    <section class="c-panel" id="price">
+    <section class="c-panel">
       <%- include('../components/_price'); %>
     </section>
-    <section class="c-panel" id="howtoeat">
+    <section class="c-panel">
       <%- include('../components/_howtoeat'); %>
     </section>
-    <section class="c-panel" id="philosophy">
+    <section class="c-panel">
       <%- include('../components/_philosophy'); %>
     </section>
-    <section class="c-panel" id="shops">
+    <section class="c-panel">
       <%- include('../components/_shops'); %>
     </section>
-    <section class="c-panel" id="news">
+    <section class="c-panel">
       <%- include('../components/_news'); %>
     </section>
-    <section class="c-panel" id="contact">
+    <section class="c-panel">
       <%- include('../components/_contact'); %>
     </section>
     <%- include('../components/_footer'); %>

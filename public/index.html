@@ -15,37 +15,54 @@
 </head>
 
   <body id="wrapper">
-    <nav class="p-gnav u-font-furuta">
-  <ul id="gnav">
-    <li>
+    <nav class="p-gnav u-font-furuta js-gnav">
+  <ul id="gnav" class="p-gnav__dot">
+    <li class="u-delay--1">
       <a href="#top"><span>Top</span></a>
     </li>
-    <li>
+    <li class="u-delay--2">
       <a href="#cheesetart"><span>BAKE CHEESE TART</span></a>
     </li>
-    <li>
+    <li class="u-delay--3">
       <a href="#essence"><span>ESSENCE</span></a>
     </li>
-    <li>
+    <li class="u-delay--4">
       <a href="#price"><span>PRICE</span></a>
     </li>
-    <li>
+    <li class="u-delay--5">
       <a href="#howtoeat"><span>HOW TO EAT</span></a>
     </li>
-    <li>
+    <li class="u-delay--6">
       <a href="#philosophy"><span>PHILOSOPHY</span></a>
     </li>
-    <li>
+    <li class="u-delay--7">
       <a href="#shops"><span>SHOPS</span></a>
     </li>
-    <li>
+    <li class="u-delay--8">
       <a href="#news"><span>NEWS</span></a>
     </li>
-    <li>
+    <li class="u-delay--9">
       <a href="#contact"><span>CONTACT - FAQ</span></a>
     </li>
   </ul>
+  <ul class="p-gnav__language u-delay--10">
+    <li class="is-selected"><i class="fas fa-globe"></i>JAPANESE</li>
+    <li><i class="fas fa-globe"></i>ENGLISH</li>
+  </ul>
+  <!-- <ul class="p-gnav__country">
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul> -->
 </nav>
+ <ul class="p-floatmenu u-font-furuta">
+  <li class="p-floatmenu__spnav js-spnav"><span></span></li>
+  <li class="p-floatmenu__lang"><i class="fas fa-globe"></i>JP</li>
+  <li class="p-floatmenu__shop">
+    <div class="p-floatmenu__navlink">SHOPS</div>
+    <div class="p-floatmenu__navlink">ONLINE SHOP</div>
+  </li>
+</ul>
 
     <div class="p-top js-opening" id="top">
       <div class="p-mv"></div>
@@ -62,7 +79,7 @@
         </svg>
       </div>
       <div class="p-top__logo js-opening">
-         <svg
+        <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   version="1.1"
@@ -197,18 +214,9 @@
 </svg>
 
       </div>
-      <ul class="p-top__nav u-font-furuta">
-        <li class="p-top__spnav"><span></span></li>
-        <li class="p-top__navlink p-top__lang"><i class="fas fa-globe"></i>JP</li>
-        <li>
-          <div class="p-top__navlink">SHOPS</div>
-          <div class="p-top__navlink">ONLINE SHOP</div>
-        </li>
-      </ul>
     </div>
-    </>
-    <section class="c-panel" id="cheesetart">
-      <div class="p-cheesetart js-opening">
+    <section class="c-panel">
+      <div class="p-cheesetart js-opening" id="cheesetart">
   <div class="p-cheesetart__lead">
     <h2 class="p-cheesetart__head">記憶に残る、ひとくち</h2>
     <p class="p-cheesetart__sub"><span>サクッ、</span><span>フワッ。</span></p>
@@ -231,8 +239,8 @@
 </div>
 
     </section>
-    <section class="c-panel" id="essence">
-      <div class="p-essence">
+    <section class="c-panel">
+      <div class="p-essence" id="essence">
   <div class="c-container">
     <div class="p-essence__panel js-opening">
       <div class="p-essence__head">
@@ -284,8 +292,8 @@
 </div>
 
     </section>
-    <section class="c-panel" id="price">
-      <div class="p-price">
+    <section class="c-panel">
+      <div class="p-price" id="price">
   <div class="p-price__inner">
     <div class="c-container">
       <h2 class="p-price__head c-heading--lg u-font-rockwell">PRICE</h2>
@@ -322,8 +330,8 @@
 </div>
 
     </section>
-    <section class="c-panel" id="howtoeat">
-      <div class="p-howtoeat">
+    <section class="c-panel">
+      <div class="p-howtoeat" id="howtoeat">
   <div class="c-container">
     <div class="p-howtoeat__head">
       <p class="p-howtoeat__heading js-opening">
@@ -408,8 +416,8 @@
 </div>
 
     </section>
-    <section class="c-panel" id="philosophy">
-      <div class="p-philosophy">
+    <section class="c-panel">
+      <div class="p-philosophy" id="philosophy">
   <div class="c-container">
     <h2 class="p-philosophy__head js-opening">
       <div class="p-philosophy__heading">
@@ -556,14 +564,14 @@
 </div>
 
     </section>
-    <section class="c-panel" id="shops">
-      <div class="p-shops js-opening"">
+    <section class="c-panel">
+      <div class="p-shops js-opening" id="shops">
   <a href="" class="p-shops__link u-font-rockwell c-heading--md">SHOPS</a>
 </div>
 
     </section>
-    <section class="c-panel" id="news">
-      <div class="p-news">
+    <section class="c-panel">
+      <div class="p-news" id="news">
   <div class="c-container">
     <div class="p-news__head">
       <h2 class="c-heading--sm u-font-rockwell js-opening">NEWS</h2>
@@ -633,8 +641,8 @@
 </div>
 
     </section>
-    <section class="c-panel" id="contact">
-      <div class="p-contact">
+    <section class="c-panel">
+      <div class="p-contact" id="contact">
   <div class="c-container">
     <div class="p-contact__head">
       <h2 class="c-heading--sm u-font-rockwell js-opening">CONTACT - FAQ</h2>

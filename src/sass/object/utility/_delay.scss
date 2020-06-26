@@ -1,0 +1,7 @@
+.u-delay {
+  @for $i from 1 through 12 {
+    &--#{$i} {
+      transition-delay: $i * 0.1s + 0.6s !important;
+    }
+  }
+}
