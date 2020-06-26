@@ -23,6 +23,10 @@
     border-color: $color-gray transparent transparent transparent;
     z-index: 3;
 
+    @include mqMd {
+      border-width: 10vw 0 0 100vw;
+    }
+
     @include mqSm {
       transform: rotateY(-180deg);
       border-width: 15vw 0 0 100vw;
@@ -38,7 +42,7 @@
     height: 100%;
     background-image: url("../image/img_shops.jpg");
     clip-path: inset(0 100% 0 0);
-    transition: all 0.8s 1s ease-out;
+    transition: all 0.8s 0.5s ease-out;
     z-index: 0;
   }
 
@@ -84,7 +88,7 @@
 
   &.is-active {
     &::after {
-      clip-path: inset(0);
+      animation: animation-cheese 1s ease-out normal forwards;
     }
 
     .p-shops__link {

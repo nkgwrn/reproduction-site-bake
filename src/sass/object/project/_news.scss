@@ -1,6 +1,6 @@
 .p-news {
   position: relative;
-  margin-bottom: 300px; //TODO: fix margin
+  margin-bottom: 20vw;
 
   &::before {
     content: "";
@@ -12,6 +12,10 @@
     border-style: solid;
     border-width: 0 0 20vw calc(100vw - 15px);
     border-color: transparent transparent #fff transparent;
+
+    @include mqMd {
+      border-width: 0 0 20vw 100vw;
+    }
 
     @include mqSm {
       top: -18.5vw;
@@ -134,12 +138,16 @@
   &__txt {
     padding: 2.5em 3em;
 
-    @include mqSm {
+    @include mqMd {
       padding: 0.1em 0 0.1em 1.5em;
     }
 
     p {
       font-size: 1.6rem; // TODO:1440px->1.4rem
+
+      @include mqMd {
+        font-size: 1rem;
+      }
 
       @include mqSm {
         font-size: 3.2vw;
@@ -150,6 +158,10 @@
       font-size: 1.4rem; // TODO:1440px->1.2rem
       display: inline-block;
       margin-top: 1em;
+
+      @include mqMd {
+        font-size: 1rem;
+      }
 
       @include mqSm {
         font-size: 2.8vw;
@@ -179,6 +191,11 @@
       display: flex;
       margin: 0 auto;
       position: relative;
+
+      @include mqMd {
+        max-width: 140px;
+        font-size: 1rem;
+      }
 
       @include mqSm {
         font-size: 4vw;

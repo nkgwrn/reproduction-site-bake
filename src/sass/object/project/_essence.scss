@@ -14,6 +14,10 @@
     border-width: 0 0 25vw calc(100vw - 15px);
     border-color: transparent transparent #fff transparent;
 
+    @include mqMd {
+      border-width: 0 0 25vw 100vw;
+    }
+
     @include mqSm {
       top: -35vw;
       border-width: 0 0 35vw 100vw;
@@ -58,6 +62,10 @@
     clip-path: inset(0 0 100% 0);
     transition: all 0.8s 0.5s ease-out;
 
+    @include mqMd {
+      top: -13em;
+    }
+
     @include mqSm {
       top: -30vw;
       right: -9%;
@@ -67,6 +75,10 @@
   &__thumb {
     margin-right: 20em;
     position: relative;
+
+    @include mqMd {
+      margin-right: 10em;
+    }
 
     @include mqSm {
       margin: 0;
@@ -83,6 +95,12 @@
     right: 610px;
     top: -15%;
     mix-blend-mode: multiply;
+
+    @include mqMd {
+      left: -6.5vw;
+      right: unset;
+      font-size: 1.6rem;
+    }
 
     @include mqSm {
       font-size: 3.6vw;
@@ -128,6 +146,10 @@
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
     transition: all 0.5s ease-out;
 
+    @include mqMd {
+      width: 40vw;
+    }
+
     @include mqSm {
       width: 85%;
       margin: 0 auto;
@@ -152,6 +174,13 @@
     opacity: 0;
     transform: translateY(10%);
 
+    @include mqMd {
+      font-size: 1rem;
+      width: 55%;
+      margin-left: 3vw;
+      padding-top: 7em;
+    }
+
     @include mqSm {
       font-size: 3.2vw;
       width: 75%;
@@ -163,6 +192,10 @@
   &__panel {
     & ~ & {
       margin-top: 25em;
+
+      @include mqMd {
+        margin-top: 3vw;
+      }
 
       @include mqSm {
         margin-top: 30vw;
@@ -190,6 +223,10 @@
           margin-right: 0;
           margin-left: 20em;
 
+          @include mqMd {
+            margin-left: 10em;
+          }
+
           @include mqSm {
             margin: 0;
             width: 100%;
@@ -206,6 +243,11 @@
         &__heading {
           right: unset;
           left: 610px;
+
+          @include mqMd {
+            left: unset;
+            right: -6.5vw;
+          }
 
           @include mqSm {
             left: unset;

@@ -567,6 +567,12 @@ li {
   background-size: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  .l-footer {
+    padding-top: 15vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .l-footer {
     padding-top: 45vw;
@@ -649,6 +655,12 @@ li {
   border-color: transparent transparent #f0f0f0 transparent;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-contact::before {
+    border-width: 0 0 10vw 100vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-contact::before {
     top: -15vw;
@@ -668,6 +680,12 @@ li {
   border-width: 25vw 0 0 calc(100vw - 15px);
   border-color: #f0f0f0 transparent transparent transparent;
   transform: rotateY(-180deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .p-contact::after {
+    border-width: 25vw 0 0 100vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -696,6 +714,12 @@ li {
   text-align: center;
   font-size: 1.8rem;
   margin-top: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-contact__lead {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -739,6 +763,12 @@ li {
   transform: translateY(0);
 }
 
+@media only screen and (max-width: 768px) {
+  .p-contact__item {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-contact__item {
     font-size: 3.2vw;
@@ -751,11 +781,24 @@ li {
   background-color: gold;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-contact__item a {
+    padding: 2.25em 1.5em;
+  }
+}
+
 .p-contact__company {
   width: calc(100% - 500px);
   margin: 4em auto 0;
   font-size: 1.6rem;
   letter-spacing: 0.15em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-contact__company {
+    width: 70%;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -807,7 +850,7 @@ li {
 
 .p-news {
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 20vw;
 }
 
 .p-news::before {
@@ -820,6 +863,12 @@ li {
   border-style: solid;
   border-width: 0 0 20vw calc(100vw - 15px);
   border-color: transparent transparent #fff transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-news::before {
+    border-width: 0 0 20vw 100vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -945,7 +994,7 @@ li {
   padding: 2.5em 3em;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .p-news__txt {
     padding: 0.1em 0 0.1em 1.5em;
   }
@@ -953,6 +1002,12 @@ li {
 
 .p-news__txt p {
   font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-news__txt p {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -965,6 +1020,12 @@ li {
   font-size: 1.4rem;
   display: inline-block;
   margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-news__txt span {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -996,6 +1057,13 @@ li {
   display: flex;
   margin: 0 auto;
   position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-news__btn a {
+    max-width: 140px;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1057,6 +1125,12 @@ li {
   z-index: 3;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-shops::before {
+    border-width: 10vw 0 0 100vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-shops::before {
     transform: rotateY(-180deg);
@@ -1074,7 +1148,7 @@ li {
   background-image: url("../image/img_shops.jpg");
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
-  transition: all 0.8s 1s ease-out;
+  transition: all 0.8s 0.5s ease-out;
   z-index: 0;
 }
 
@@ -1118,8 +1192,8 @@ li {
 }
 
 .p-shops.is-active::after {
-  -webkit-clip-path: inset(0);
-  clip-path: inset(0);
+  -webkit-animation: animation-cheese 1s ease-out normal forwards;
+  animation: animation-cheese 1s ease-out normal forwards;
 }
 
 .p-shops.is-active .p-shops__link {
@@ -1189,6 +1263,12 @@ li {
   font-weight: normal;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-philosophy__heading {
+    font-size: 2.8rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-philosophy__heading {
     font-size: 7.2vw;
@@ -1200,6 +1280,12 @@ li {
 
 .p-philosophy__heading ~ .p-philosophy__heading {
   top: -55px;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy__heading ~ .p-philosophy__heading {
+    top: -5vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1250,6 +1336,12 @@ li {
   width: 50%;
   position: relative;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy__panel {
+    width: 55%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1309,6 +1401,12 @@ li {
 
 .p-philosophy__panel.is-open {
   width: 54.5%;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy__panel.is-open {
+    width: 66%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1431,7 +1529,7 @@ li {
   top: 0;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .p-philosophy__body:last-child .p-philosophy__jp {
     left: 6rem;
   }
@@ -1471,11 +1569,17 @@ li {
   opacity: 0;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-philosophy__jp {
+    font-size: 1.4rem;
+    top: 2rem;
+    right: 7.5rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-philosophy__jp {
     font-size: 4vw;
-    top: 2rem;
-    right: 7.5rem;
   }
 }
 
@@ -1489,6 +1593,12 @@ li {
   top: 0;
   text-align: right;
   line-height: 1.2;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy__en {
+    font-size: 6rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1528,6 +1638,12 @@ li {
   -webkit-clip-path: inset(0 100% 0 0);
   clip-path: inset(0 100% 0 0);
   transition: all 0.5s 1s ease-out;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy-card__label {
+    font-size: 1.4rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1613,6 +1729,12 @@ li {
   background-color: gold;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-philosophy-card__body {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-philosophy-card__body {
     font-size: 3.2vw;
@@ -1622,6 +1744,12 @@ li {
 
 .p-philosophy-card__body dt {
   font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-philosophy-card__body dt {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1707,8 +1835,14 @@ li {
   background-color: gold;
   font-size: 1.6rem;
   position: relative;
-  margin-top: 280px;
   padding-bottom: 12.5vw;
+  margin-top: -1.5vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-howtoeat {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1731,10 +1865,15 @@ li {
   border-color: transparent transparent gold transparent;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .p-howtoeat::before {
     top: -16vw;
     border-width: 0 0 16vw 100vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .p-howtoeat::before {
     transform: rotateY(-180deg);
   }
 }
@@ -1745,10 +1884,18 @@ li {
   letter-spacing: 0.1em;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-howtoeat__head {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-howtoeat__head {
     letter-spacing: 0.03em;
     line-height: 2;
+    width: 100%;
   }
 }
 
@@ -1759,6 +1906,12 @@ li {
   padding-top: 2vw;
   transition: all 1s 0.3s ease;
   opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-howtoeat__heading {
+    top: -2em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1781,7 +1934,8 @@ li {
 
 @media only screen and (max-width: 480px) {
   .p-howtoeat__body {
-    padding-top: 16vw;
+    width: 50%;
+    right: 0;
   }
 }
 
@@ -1792,6 +1946,14 @@ li {
   transition: all 1s 0.3s ease;
   opacity: 0;
   padding-top: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-howtoeat__body > p {
+    width: 50%;
+    right: 0;
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1819,6 +1981,12 @@ li {
   grid-template-rows: auto;
   gap: 50px;
   padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-howtoeat-card {
+    gap: 5vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -1890,6 +2058,12 @@ li {
   position: relative;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-howtoeat-card__head > span {
+    font-size: 1.2rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-howtoeat-card__head > span {
     font-size: 3.6vw;
@@ -1930,6 +2104,12 @@ li {
   display: block;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-howtoeat-card__en {
+    font-size: 2.5rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-howtoeat-card__en {
     font-size: 6.6vw;
@@ -1938,6 +2118,12 @@ li {
 
 .p-howtoeat-card__jp {
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-howtoeat-card__jp {
+    font-size: 1.1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2012,6 +2198,12 @@ li {
 
 @media only screen and (max-width: 480px) {
   .p-price__head {
+    padding-top: 10vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .p-price__head {
     text-align: center;
     padding-top: 8vw;
   }
@@ -2065,6 +2257,12 @@ li {
   margin-left: 3vw;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-price__piece {
+    font-size: 1.4rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-price__piece {
     font-size: 3.6vw;
@@ -2076,6 +2274,12 @@ li {
   margin-top: -2vw;
   right: 1em;
   position: absolute;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-price__price {
+    font-size: 2rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2109,8 +2313,15 @@ li {
   transition: all 0.3s ease-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-price__thumb {
+    width: 95%;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-price__thumb {
+    width: 75%;
     margin-top: -5vw;
   }
 }
@@ -2142,6 +2353,13 @@ li {
   transform: translateY(2vw);
 }
 
+@media only screen and (max-width: 768px) {
+  .p-price__note {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-price__note {
     font-size: 2vw;
@@ -2167,6 +2385,12 @@ li {
 
 .p-price__item ~ .p-price__item {
   margin-top: 18em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-price__item ~ .p-price__item {
+    margin-top: 10em;
+  }
 }
 
 .p-price__item.is-active .p-price__price > span,
@@ -2207,6 +2431,12 @@ li {
   border-style: solid;
   border-width: 0 0 25vw calc(100vw - 15px);
   border-color: transparent transparent #fff transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-essence::before {
+    border-width: 0 0 25vw 100vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2255,6 +2485,12 @@ li {
   transition: all 0.8s 0.5s ease-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-essence__ttl {
+    top: -13em;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-essence__ttl {
     top: -30vw;
@@ -2265,6 +2501,12 @@ li {
 .p-essence__thumb {
   margin-right: 20em;
   position: relative;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-essence__thumb {
+    margin-right: 10em;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2284,6 +2526,14 @@ li {
   right: 610px;
   top: -15%;
   mix-blend-mode: multiply;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-essence__heading {
+    left: -6.5vw;
+    right: unset;
+    font-size: 1.6rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2336,6 +2586,12 @@ li {
   transition: all 0.5s ease-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-essence__img {
+    width: 40vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-essence__img {
     width: 85%;
@@ -2364,6 +2620,15 @@ li {
   transform: translateY(10%);
 }
 
+@media only screen and (max-width: 768px) {
+  .p-essence__body {
+    font-size: 1rem;
+    width: 55%;
+    margin-left: 3vw;
+    padding-top: 7em;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-essence__body {
     font-size: 3.2vw;
@@ -2375,6 +2640,12 @@ li {
 
 .p-essence__panel ~ .p-essence__panel {
   margin-top: 25em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-essence__panel ~ .p-essence__panel {
+    margin-top: 3vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2405,6 +2676,12 @@ li {
   margin-left: 20em;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-essence__panel:last-child .p-essence__thumb {
+    margin-left: 10em;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-essence__panel:last-child .p-essence__thumb {
     margin: 0;
@@ -2423,6 +2700,13 @@ li {
 .p-essence__panel:last-child .p-essence__heading {
   right: unset;
   left: 610px;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-essence__panel:last-child .p-essence__heading {
+    left: unset;
+    right: -6.5vw;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2499,10 +2783,22 @@ li {
   width: 63.5%;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer__info {
+    width: 76%;
+  }
+}
+
 .p-footer__nav {
   display: flex;
   font-size: 1.5rem;
   justify-content: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer__nav {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2513,6 +2809,12 @@ li {
 
 .p-footer__nav > * ~ * {
   margin-left: 2.5em;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-footer__nav > * ~ * {
+    margin-left: 1.5em;
+  }
 }
 
 .p-footer__bottom {
@@ -2548,6 +2850,12 @@ li {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-footer__copy {
+    font-size: 1rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-footer__copy {
     display: none;
@@ -2574,6 +2882,12 @@ li {
   padding: 380px 240px 420px;
 }
 
+@media only screen and (max-width: 768px) {
+  .p-cheesetart__lead {
+    padding: 30vw 17vw;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-cheesetart__lead {
     padding: 98vw 16vw 37.5vw;
@@ -2588,6 +2902,12 @@ li {
   transform: translateY(10%);
 }
 
+@media only screen and (max-width: 768px) {
+  .p-cheesetart__head {
+    font-size: 2rem;
+  }
+}
+
 @media only screen and (max-width: 480px) {
   .p-cheesetart__head {
     font-size: 6.5vw;
@@ -2597,6 +2917,12 @@ li {
 .p-cheesetart__sub {
   font-size: 2.6rem;
   margin-top: 4.2vw;
+}
+
+@media only screen and (max-width: 768px) {
+  .p-cheesetart__sub {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -2623,6 +2949,12 @@ li {
   transition: all 1.5s 3.2s ease;
   opacity: 0;
   transform: translateY(20%);
+}
+
+@media only screen and (max-width: 768px) {
+  .p-cheesetart__text {
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (max-width: 480px) {

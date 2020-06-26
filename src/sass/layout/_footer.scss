@@ -5,6 +5,10 @@
   background-position: bottom;
   background-size: 100%;
 
+  @include mqMd {
+    padding-top: 15vw;
+  }
+
   @include mqSm {
     padding-top: 45vw;
     background-image: url("../image/bg_footer_sp.jpg");

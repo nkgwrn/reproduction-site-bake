@@ -5,6 +5,10 @@
   gap: 50px;
   padding-bottom: 2em;
 
+  @include mqMd {
+    gap: 5vw;
+  }
+
   @include mqSm {
     grid-template-columns: 1fr 1fr;
     gap: 6vw;
@@ -64,6 +68,10 @@
       width: 3em;
       position: relative;
 
+      @include mqMd {
+        font-size: 1.2rem;
+      }
+
       @include mqSm {
         font-size: 3.6vw;
         width: 2.4em;
@@ -101,6 +109,10 @@
     letter-spacing: 0.15em;
     display: block;
 
+    @include mqMd {
+      font-size: 2.5rem;
+    }
+
     @include mqSm {
       font-size: 6.6vw;
     }
@@ -108,6 +120,10 @@
 
   &__jp {
     font-size: 2rem;
+
+    @include mqMd {
+      font-size: 1.1rem;
+    }
 
     @include mqSm {
       font-size: 3.2vw;

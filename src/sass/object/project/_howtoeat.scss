@@ -2,8 +2,12 @@
   background-color: $color-primary;
   font-size: 1.6rem;
   position: relative;
-  margin-top: 280px;
   padding-bottom: 12.5vw;
+  margin-top: -1.5vw;
+
+  @include mqMd {
+    font-size: 1.1rem;
+  }
 
   @include mqSm {
     padding-bottom: 42vw;
@@ -22,9 +26,12 @@
     transform: rotateY(-180deg);
     border-color: transparent transparent $color-primary transparent;
 
-    @include mqSm {
+    @include mqMd {
       top: -16vw;
       border-width: 0 0 16vw 100vw;
+    }
+
+    @include mqSm {
       transform: rotateY(-180deg);
     }
   }
@@ -34,9 +41,15 @@
     font-size: 2.4rem;
     letter-spacing: 0.1em;
 
+    @include mqMd {
+      font-size: 1.3rem;
+      width: 50%;
+    }
+
     @include mqSm {
       letter-spacing: 0.03em;
       line-height: 2;
+      width: 100%;
     }
   }
 
@@ -47,6 +60,10 @@
     padding-top: 2vw;
     transition: all 1s 0.3s ease;
     opacity: 0;
+
+    @include mqMd {
+      top: -2em;
+    }
 
     @include mqSm {
       position: static;
@@ -65,7 +82,8 @@
     position: relative;
 
     @include mqSm {
-      padding-top: 16vw;
+      width: 50%;
+      right: 0;
     }
 
     > p {
@@ -75,6 +93,12 @@
       transition: all 1s 0.3s ease;
       opacity: 0;
       padding-top: 2vw;
+
+      @include mqMd {
+        width: 50%;
+        right: 0;
+        font-size: 1.1rem;
+      }
 
       @include mqSm {
         width: 100%;

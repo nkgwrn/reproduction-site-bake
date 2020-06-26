@@ -14,6 +14,10 @@
   &__lead {
     padding: 380px 240px 420px;
 
+    @include mqMd {
+      padding: 30vw 17vw;
+    }
+
     @include mqSm {
       padding: 98vw 16vw 37.5vw;
     }
@@ -26,6 +30,10 @@
     opacity: 0;
     transform: translateY(10%);
 
+    @include mqMd {
+      font-size: 2rem;
+    }
+
     @include mqSm {
       font-size: 6.5vw;
     }
@@ -34,6 +42,10 @@
   &__sub {
     font-size: 2.6rem;
     margin-top: 4.2vw;
+
+    @include mqMd {
+      font-size: 1.5rem;
+    }
 
     @include mqSm {
       font-size: 4.8vw;
@@ -58,6 +70,10 @@
     transition: all 1.5s 3.2s ease;
     opacity: 0;
     transform: translateY(20%);
+
+    @include mqMd {
+      font-size: 1rem;
+    }
 
     @include mqSm {
       font-size: 3.8vw;

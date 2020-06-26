@@ -12,6 +12,10 @@
     clip-path: inset(0 100% 0 0);
     transition: all 0.5s 1s ease-out;
 
+    @include mqMd {
+      font-size: 1.4rem;
+    }
+
     @include mqSm {
       font-size: 3.8vw;
       padding: 1em 2em;
@@ -89,6 +93,10 @@
     padding: 2.75em 3em;
     background-color: $color-primary;
 
+    @include mqMd {
+      font-size: 1rem;
+    }
+
     @include mqSm {
       font-size: 3.2vw;
       padding: 1em 1.8em;
@@ -96,6 +104,10 @@
 
     dt {
       font-size: 3rem;
+
+      @include mqMd {
+        font-size: 2rem;
+      }
 
       @include mqSm {
         font-size: 5.4vw;
