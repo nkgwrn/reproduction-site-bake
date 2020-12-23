@@ -1934,7 +1934,7 @@ li {
 
 @media only screen and (max-width: 480px) {
   .p-howtoeat__body {
-    width: 50%;
+    width: 100%;
     right: 0;
   }
 }
